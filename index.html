@@ -394,14 +394,22 @@ function renderKnockout(){
   const w=g=>W[g]||`W Grp ${g}`,ru=g=>RU[g]||`2nd ${g}`;
 
   const r32=[
-    {id:'r32_0',h:w('A'),a:ru('C')},{id:'r32_1',h:w('C'),a:ru('A')},
-    {id:'r32_2',h:w('B'),a:ru('D')},{id:'r32_3',h:w('D'),a:ru('B')},
-    {id:'r32_4',h:w('E'),a:ru('G')},{id:'r32_5',h:w('G'),a:ru('E')},
-    {id:'r32_6',h:w('F'),a:ru('H')},{id:'r32_7',h:w('H'),a:ru('F')},
-    {id:'r32_8',h:w('I'),a:ru('K')},{id:'r32_9',h:w('K'),a:ru('I')},
-    {id:'r32_10',h:w('J'),a:ru('L')},{id:'r32_11',h:w('L'),a:ru('J')},
-    {id:'r32_12',h:w('G'),a:'3rd best'},{id:'r32_13',h:'3rd best',a:'3rd best'},
-    {id:'r32_14',h:'3rd best',a:'3rd best'},{id:'r32_15',h:'3rd best',a:'3rd best'},
+    {id:'r32_0', h:'South Africa',       a:'Canada'},
+    {id:'r32_1', h:'Brazil',             a:'Japan'},
+    {id:'r32_2', h:'Germany',            a:'Paraguay'},
+    {id:'r32_3', h:'Netherlands',        a:'Morocco'},
+    {id:'r32_4', h:'France',             a:'Sweden'},
+    {id:'r32_5', h:'Ivory Coast',        a:'Norway'},
+    {id:'r32_6', h:'Mexico',             a:'Ecuador'},
+    {id:'r32_7', h:'USA',                a:'Bosnia-Herzegovina'},
+    {id:'r32_8', h:'Belgium',            a:'Senegal'},
+    {id:'r32_9', h:'England',            a:'Congo DR'},
+    {id:'r32_10',h:'Colombia',           a:'Croatia'},
+    {id:'r32_11',h:'Spain',              a:'Austria'},
+    {id:'r32_12',h:'Switzerland',        a:'Algeria'},
+    {id:'r32_13',h:'Argentina',          a:'Cape Verde'},
+    {id:'r32_14',h:'Australia',          a:'Egypt'},
+    {id:'r32_15',h:'Portugal',           a:'Ghana'},
   ];
   const kw=id=>koWinner(id)||'TBD';
   const r16=[{id:'r16_0',h:kw('r32_0'),a:kw('r32_1')},{id:'r16_1',h:kw('r32_2'),a:kw('r32_3')},{id:'r16_2',h:kw('r32_4'),a:kw('r32_5')},{id:'r16_3',h:kw('r32_6'),a:kw('r32_7')},{id:'r16_4',h:kw('r32_8'),a:kw('r32_9')},{id:'r16_5',h:kw('r32_10'),a:kw('r32_11')},{id:'r16_6',h:kw('r32_12'),a:kw('r32_13')},{id:'r16_7',h:kw('r32_14'),a:kw('r32_15')}];
