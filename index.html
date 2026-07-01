@@ -412,7 +412,17 @@ function renderKnockout(){
     {id:'r32_15',h:'Portugal',           a:'Ghana'},
   ];
   const kw=id=>koWinner(id)||'TBD';
-  const r16=[{id:'r16_0',h:kw('r32_0'),a:kw('r32_1')},{id:'r16_1',h:kw('r32_2'),a:kw('r32_3')},{id:'r16_2',h:kw('r32_4'),a:kw('r32_5')},{id:'r16_3',h:kw('r32_6'),a:kw('r32_7')},{id:'r16_4',h:kw('r32_8'),a:kw('r32_9')},{id:'r16_5',h:kw('r32_10'),a:kw('r32_11')},{id:'r16_6',h:kw('r32_12'),a:kw('r32_13')},{id:'r16_7',h:kw('r32_14'),a:kw('r32_15')}];
+  // Official R16 pairings: M73vM75, M74vM77, M76vM78, M79vM80, M81vM82, M83vM84, M85vM87, M86vM88
+  const r16=[
+    {id:'r16_0',h:kw('r32_0'),a:kw('r32_3')},   // M73 vs M75: Canada/SA vs Morocco/Netherlands
+    {id:'r16_1',h:kw('r32_2'),a:kw('r32_4')},   // M74 vs M77: Paraguay/Germany vs France/Sweden
+    {id:'r16_2',h:kw('r32_1'),a:kw('r32_5')},   // M76 vs M78: Brazil/Japan vs Norway/IvoryCoast
+    {id:'r16_3',h:kw('r32_6'),a:kw('r32_9')},   // M79 vs M80: Mexico/Ecuador vs England/Congo
+    {id:'r16_4',h:kw('r32_7'),a:kw('r32_8')},   // M81 vs M82: USA/Bosnia vs Belgium/Senegal
+    {id:'r16_5',h:kw('r32_10'),a:kw('r32_11')}, // M83 vs M84: Colombia/Croatia vs Spain/Austria
+    {id:'r16_6',h:kw('r32_12'),a:kw('r32_15')}, // M85 vs M87: Switzerland/Algeria vs Portugal/Ghana
+    {id:'r16_7',h:kw('r32_13'),a:kw('r32_14')}, // M86 vs M88: Argentina/CapeVerde vs Australia/Egypt
+  ];
   const qf=[{id:'qf_0',h:kw('r16_0'),a:kw('r16_1')},{id:'qf_1',h:kw('r16_2'),a:kw('r16_3')},{id:'qf_2',h:kw('r16_4'),a:kw('r16_5')},{id:'qf_3',h:kw('r16_6'),a:kw('r16_7')}];
   const sf=[{id:'sf_0',h:kw('qf_0'),a:kw('qf_1')},{id:'sf_1',h:kw('qf_2'),a:kw('qf_3')}];
   const third={id:'3rd',h:koLoser('sf_0')||'TBD',a:koLoser('sf_1')||'TBD'};
