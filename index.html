@@ -267,7 +267,7 @@ let scores={},koScores={},wagers={},fixFilter='all',wType='p2p';
 function setSave(s){const el=document.getElementById('save-ind');el.textContent=s==='saving'?'Saving...':s==='saved'?'Saved ✓':'Live';el.className='save-ind'+(s?' '+s:'');if(s==='saved')setTimeout(()=>setSave(''),2000);}
 
 onValue(ref(db,'scores'),snap=>{const inc=snap.val()||{};const foc=document.activeElement;scores=inc;if(foc&&foc.dataset&&foc.dataset.id&&foc.classList.contains('score-in')){if(!scores[foc.dataset.id])scores[foc.dataset.id]={h:'',a:''};scores[foc.dataset.id][foc.dataset.side]=foc.value;}renderAll();setSave('');});
-onValue(ref(db,'ko'),snap=>{koScores=snap.val()||{};renderKnockout();renderWinners();});
+onValue(ref(db,'ko'),snap=>{koScores=snap.val()||{};renderKnockout();renderWinners();renderTeams();updateStats();});
 onValue(ref(db,'wagers'),snap=>{wagers=snap.val()||{};renderWagers();updateWagerStat();});
 
 function owner(t){for(const[k,v]of Object.entries(TEAMS))if(k.toLowerCase()===t.toLowerCase())return v.p;return null;}
