@@ -423,7 +423,14 @@ function renderKnockout(){
     {id:'r16_6',h:kw('r32_12'),a:kw('r32_15')}, // M85 vs M87: Switzerland/Algeria vs Colombia/Ghana
     {id:'r16_7',h:kw('r32_13'),a:kw('r32_14')}, // M86 vs M88: Argentina/CapeVerde vs Australia/Egypt
   ];
-  const qf=[{id:'qf_0',h:kw('r16_0'),a:kw('r16_1')},{id:'qf_1',h:kw('r16_2'),a:kw('r16_3')},{id:'qf_2',h:kw('r16_4'),a:kw('r16_5')},{id:'qf_3',h:kw('r16_6'),a:kw('r16_7')}];
+  // Official QF pairings: M97=W89vW90, M98=W93vW94, M99=W91vW92, M100=W95vW96
+  // r16_1=M89, r16_0=M90, r16_2=M91, r16_3=M92, r16_5=M93, r16_4=M94, r16_7=M95, r16_6=M96
+  const qf=[
+    {id:'qf_0',h:kw('r16_1'),a:kw('r16_0')}, // M97: Paraguay/France v Canada/Morocco
+    {id:'qf_1',h:kw('r16_5'),a:kw('r16_4')}, // M98: Portugal/Spain v USA/Belgium
+    {id:'qf_2',h:kw('r16_2'),a:kw('r16_3')}, // M99: Brazil/Norway v Mexico/England
+    {id:'qf_3',h:kw('r16_7'),a:kw('r16_6')}, // M100: Argentina/Egypt v Switzerland/Colombia
+  ];
   const sf=[{id:'sf_0',h:kw('qf_0'),a:kw('qf_1')},{id:'sf_1',h:kw('qf_2'),a:kw('qf_3')}];
   const third={id:'3rd',h:koLoser('sf_0')||'TBD',a:koLoser('sf_1')||'TBD'};
   const final={id:'final',h:kw('sf_0'),a:kw('sf_1')};
